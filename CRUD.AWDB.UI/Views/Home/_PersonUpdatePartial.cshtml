@@ -1,0 +1,64 @@
+﻿
+@model CRUD.AWDB.UI.Dtos.UpdateDto
+
+<div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><span class="fas fa-plus"></span> Update Person</h5>
+
+            </div>
+            <div class="modal-body">
+                <form id="form-person-update">
+                    <input id="hiddenId" type="hidden" asp-for="BusinessEntityId" />
+                    <div asp-validation-summary="All" class="text-danger" id="validation-summary" aria-hidden="true" style="display: none;"></div>
+                    <div class="form-group">
+                        <label asp-for="FirstName"></label>
+                        <input class="form-control" id="FirstName" asp-for="FirstName" />
+                        <span class="text-danger" asp-validation-for="FirstName"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="LastName"></label>
+                        <input class="form-control" id="LastName" asp-for="LastName" />
+                        <span class="text-danger" asp-validation-for="LastName"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="MiddleName"></label>
+                        <input class="form-control" id="MiddleName" asp-for="MiddleName" />
+                        <span class="text-danger" asp-validation-for="MiddleName"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Title"></label>
+                        <input class="form-control" id="Title" asp-for="Title" />
+                        <span class="text-danger" asp-validation-for="Title"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Suffix"></label>
+                        <input class="form-control" id="Suffix" asp-for="Suffix" />
+                        <span class="text-danger" asp-validation-for="Suffix"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="PersonType"></label>
+                        <select id="PersonType" asp-for=PersonType class="form-control">
+                            <option value="IN">IN</option>
+                            <option value="EM">EM</option>
+                            <option value="SP">SP</option>
+                            <option value="SC">SC</option>
+                            <option value="VC">VC</option>
+                            <option value="GC">GC</option>
+                        </select>
+
+                        <span class="text-danger" asp-validation-for="PersonType"></span>
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-block" id="btnUpdate">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -21,10 +21,27 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
+
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
+//
+//app.UseAuthorization();
+//app.UseRouting();
+
+//app.UseEndpoints(endpoints =>
+//{
+//    endpoints.MapControllerRoute(
+//        name: "default",
+//        pattern: "{controller=AdventureWorks}/{action=Index}/{id?}");
+//});
 
 app.MapControllers();
+
+
+app.UseCors(builder =>
+{
+    builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
+});
 
 app.Run();

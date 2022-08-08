@@ -24,3 +24,5 @@ C:\Users\Harun\Desktop\CRUD.AWDB\CRUD.AWDB.UI\obj\Debug\net6.0\refint\CRUD.AWDB.
 C:\Users\Harun\Desktop\CRUD.AWDB\CRUD.AWDB.UI\obj\Debug\net6.0\CRUD.AWDB.UI.pdb
 C:\Users\Harun\Desktop\CRUD.AWDB\CRUD.AWDB.UI\obj\Debug\net6.0\CRUD.AWDB.UI.genruntimeconfig.cache
 C:\Users\Harun\Desktop\CRUD.AWDB\CRUD.AWDB.UI\obj\Debug\net6.0\ref\CRUD.AWDB.UI.dll
+C:\Users\Harun\Desktop\CRUD.AWDB\CRUD.AWDB.UI\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Harun\Desktop\CRUD.AWDB\CRUD.AWDB.UI\obj\Debug\net6.0\CRUD.AWDB.UI.csproj.CopyComplete

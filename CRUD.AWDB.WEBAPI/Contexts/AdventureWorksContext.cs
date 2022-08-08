@@ -19,7 +19,7 @@ namespace CRUD.AWDB.WEBAPI.Contexts
         public virtual DbSet<PersonPhone> PersonPhones { get; set; } = null!;
         public virtual DbSet<PhoneNumberType> PhoneNumberTypes { get; set; } = null!;
         public virtual DbSet<StateProvince> StateProvinces { get; set; } = null!;
-
+        public virtual DbSet<BusinessEntity> BusinessEntity { get; set; } = null!;
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -80,7 +80,10 @@ namespace CRUD.AWDB.WEBAPI.Contexts
                     .OnDelete(DeleteBehavior.ClientSetNull);
             });
 
-
+            modelBuilder.Entity<BusinessEntity>(entity =>
+            {
+                entity.ToTable("BusinessEntity", "Person");
+            });
 
             modelBuilder.Entity<BusinessEntityAddress>(entity =>
             {
@@ -365,7 +368,7 @@ namespace CRUD.AWDB.WEBAPI.Contexts
                     .HasMaxLength(8)
                     .HasComment("A courtesy title. For example, Mr. or Ms.");
 
-                
+
             });
 
 
@@ -487,7 +490,7 @@ namespace CRUD.AWDB.WEBAPI.Contexts
                     .HasForeignKey(d => d.CountryRegionCode)
                     .OnDelete(DeleteBehavior.ClientSetNull);
 
-                
+
             });
 
 
